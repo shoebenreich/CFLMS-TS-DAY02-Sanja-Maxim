@@ -1,18 +1,36 @@
-class Person {
-    name="";
-    age ="";
-    jobTitle = "";
+class Person{
+ name="";
+ age ="";
+ jobTitle = "";
+    
 
-    constructor(name,age,job) {
+    constructor(name,age,jobTitle) {
         this.name = name;
         this.age = age;
-        this.jobTitle = job;
+        this.jobTitle = jobTitle;
     }
-    hiThere = () => {
+    hiThere  () {
         return `Hello there, my name is ${this.name} and I am ${this.age} years old, and I am a ${this.jobTitle}`;
     }
 }
 
-let barbara = new Person("Barbara",43,"Web Developer");
+class MoreInfo extends Person{
+    salary="";
+    jobLocation="";
 
-console.log(barbara.hiThere())
+    constructor (name,age,jobTitle,salary,jobLocation){
+        super(name,age,jobTitle);
+        this.salary = salary;
+        this.jobLocation = jobLocation;
+    }
+    hello () {
+        return `${super.hiThere()} and I get ${this.salary} every month, and I work in ${this.jobLocation}`;
+    }
+
+}
+
+
+let barbara = new MoreInfo("Barbara",43,"Web Developer",3000,"Vienna");
+
+    console.log(barbara.hello())
+
