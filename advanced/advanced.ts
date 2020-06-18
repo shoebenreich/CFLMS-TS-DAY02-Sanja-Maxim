@@ -24,7 +24,7 @@ class Vehicles {
     }
 
     printInfo(){
-        return `Brand: ${this.brand}</td>Type: ${this.type}</td>KM: ${this.km}</td>Horsepower: ${this.hp}</td>Seats: ${this.seats}</td>Color: ${this.color}</td>Manufacturing Year: ${this.year}</td>FuelType: ${this.fuel}</td>Automatic: ${this.automatic}</td>Model: ${this.model}</td>
+        return `Brand: ${this.brand}</td>Type: ${this.type}</td>KM: ${this.km}</td>Horsepower: ${this.hp}</td>Seats: ${this.seats}</td>Color: ${this.color}</td>Manufacturing Year: ${this.year}</td>FuelType: ${this.fuel}</td>Automatic: ${this.automatic}</td>Model: ${this.model}</td>`
     }
 }
 
