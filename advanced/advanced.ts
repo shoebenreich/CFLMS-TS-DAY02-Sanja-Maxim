@@ -24,9 +24,20 @@ class Vehicles {
     }
 
     printInfo(){
-        console.log(`Brand: ${this.brand}\nType: ${this.type}\nKM: ${this.km}\nHorsepower: ${this.hp}\nSeats: ${this.seats}\nColor: ${this.color}\nManufacturing Year: ${this.year}\nFuelType: ${this.fuel}\nAutomatic: ${this.automatic}\nModel: ${this.model}\n`)
+        return `Brand: ${this.brand}</td>Type: ${this.type}</td>KM: ${this.km}</td>Horsepower: ${this.hp}</td>Seats: ${this.seats}</td>Color: ${this.color}</td>Manufacturing Year: ${this.year}</td>FuelType: ${this.fuel}</td>Automatic: ${this.automatic}</td>Model: ${this.model}</td>
     }
 }
-// let mustang = new Vehicles("Ford","Mustang","Sportback",120000,480,4,"blue",1960,"petrol",false);
-// mustang.printInfo();
 
+// let output = document.getElementsByClassName("car")
+let mustang = new Vehicles("Ford","Mustang","Sportback",120000,480,4,"blue",1960,"petrol",false);
+
+
+let BMW = new Vehicles("BMW","Mustang","Sportback",120000,480,4,"blue",1960,"petrol",false);
+
+
+// $(".car").append(mustang.printInfo());
+// document.getElementsByClassName('car').innerHTML=mustang.printInfo();
+
+let myContainer = <HTMLElement> document.querySelector(".car");
+myContainer.innerHTML = mustang.printInfo();
+myContainer.innerHTML += BMW.printInfo();
